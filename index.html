@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <meta charset="UTF-8">
@@ -11,25 +12,33 @@
 
 </head>
 <body>
-    <div class="container">
-        <div class="row bg-light border border-primary">
+    <div class="container border border-secondary mt-3">
+        <div class="row bg-light p-1 border border-bottom-secondary">
             <h2> Payment form example</h2>
         </div>
-    <div class="row align-items-start">
-        <div class="col flex-column d-flex">
+            
+        
+            <div class="col">
+            <div class="mt-3 rounded border border-danger bg-danger p-2 text-danger bg-opacity-10"><strong> Some fields are missing</strong></div>
+            <div class="row  text-danger bg-secondary m-auto ">
+            </div>
+<form>
+        </div>
+    <div class="row align-items-start mt-5 mb-3">
+        <div class="col-5 flex-column d-flex">
             <label for="card"><strong> Card # </strong></label>
             <input type="number" id="card" placeholder="XXXX XXXX XXXX XXXX" required>
         </div> 
-        <div class="col flex-column d-flex">
+        <div class="col-3 flex-column d-flex">
             <label for="cvc"><strong> CVC # </strong></label>
             <input type="number" id="cvc" placeholder="XXX" required>
         </div>
-        <div class="col flex-column d-flex">
+        <div class="col-3 flex-column d-flex">
             <label for="amount"><strong> Amount # </strong></label>
-            <input type="number" id="amount" placeholder="Amount" required>
+            <input type="number" id="amount" placeholder="$ Amount" required>
         </div>
     </div> <!-- row -->
-    <div class="row align-items-start">
+    <div class="row align-items-start mb-3">
         <div class="col flex-column d-flex">
             <label for="name"><strong>First Name</strong></label>
             <input type="text" id="name" required>
@@ -40,20 +49,21 @@
         </div>
     </div> <!-- row -->
     
-<div class="row align-items-start">
-    <div class="col flex-column d-flex">
+<div class="row align-items-start mb-3">
+    <div class="col-6 flex-column d-flex">
         <label for="city"><strong> City </strong></label>
         <input type="text" id="city" required>
     </div> 
-    <div class="col flex-column d-flex">
+    <div class="col-3 flex-column d-flex">
         <label for="state" placeholder="Pick a state" ><strong> State </strong></label>
-        <select name="state"  id="state"  required>
+        <select class="p-1" option="state"  id="state"  required>
+        <option selected>Pick a state</option>
         <option value="Valencia">Valencia</option>
         <option value="Castellón">Castellón</option>
         <option value="Alicante">Alicante</option>
         </select>
     </div>
-    <div class="col flex-column d-flex">
+    <div class="col-3 flex-column d-flex">
         <label for="Postal Code"><strong> Postal Code </strong></label>
         <input type="number" id="Postal Code" required>
     </div>
@@ -62,11 +72,32 @@
 <div class="row align-items-start">
     <div class="col flex-column d-flex">
         <label for="credit card"><strong>We Accept</strong></label>
-        <div class="credit card bg-secondary">
-            <input type="radio" id="mastercard" required>
-            <input type="radio" id="visa" required>
-            <input type="radio" id="american" required>
-            <input type="radio" id="4b" required>
+
+        <div class="creditcards p-1 my-3 d-flex bg-secondary col-5 justify-content-between rounded">
+
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                <i class="fa-brands fa-cc-mastercard"></i>
+                <label class="form-check-label" for="flexRadioDefault1"></label>
+                    
+                
+            </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+            <i class="fa-brands fa-cc-visa"></i>
+            <label class="form-check-label" for="flexRadioDefault2"></label>
+              
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+            <i class="fa-brands fa-cc-amazon-pay"></i>
+            <label class="form-check-label" for="flexRadioDefault2"></label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+            <i class="fa-brands fa-cc-paypal"></i>
+            <label class="form-check-label" for="flexRadioDefault2"></label>
+          </div>
         </div>
     </div> 
     <div class="col flex-column d-flex">
@@ -76,17 +107,20 @@
     </div>
 </div> <!-- Row -->
 
-    <div class="row justify-content-end">
+    <div class="row justify-content-end p-2 border border-secondary mb-2">
         <div class="col-1">
-        <button type="button" class="btn btn-secondary">Cancel</button>
+        <button type="reset" class="btn btn-secondary">Cancel</button>
         </div>
         <div class="col-1">
-        <button type="button" class="btn btn-primary">Send</button>
+        <button type="submit" class="btn btn-primary">Send</button>
         </div>
 
     </div>
+
+</form>
+
+</div><!-- Container -->
     
         
-    </div><!-- Container -->
 </body>
 </html>
