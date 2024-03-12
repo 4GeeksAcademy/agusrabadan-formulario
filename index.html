@@ -12,115 +12,129 @@
 
 </head>
 <body>
-    <div class="container border border-secondary mt-3">
+    <div class="container border border-secondary mt-3 mb-3">
         <div class="row bg-light p-1 border border-bottom-secondary">
             <h2> Payment form example</h2>
         </div>
-            
         
-            <div class="col">
-            <div class="mt-3 rounded border border-danger bg-danger p-2 text-danger bg-opacity-10"><strong> Some fields are missing</strong></div>
-            <div class="row  text-danger bg-secondary m-auto ">
-            </div>
-<form>
+        <div class="col">
+        <div class="mt-3 rounded border border-danger bg-danger p-2 text-danger bg-opacity-10"><strong> Some fields are missing</strong></div>
+        <div class="row  text-danger bg-secondary m-auto ">
         </div>
-    <div class="row align-items-start mt-5 mb-3">
-        <div class="col-5 flex-column d-flex">
+    </div>
+        
+    <form>
+        <div class="row align-items-start mt-5 mb-3">
+            <div class="col-5 flex-column d-flex">
             <label for="card"><strong> Card # </strong></label>
             <input type="number" id="card" placeholder="XXXX XXXX XXXX XXXX" required>
         </div> 
+            
+        
         <div class="col-3 flex-column d-flex">
             <label for="cvc"><strong> CVC # </strong></label>
             <input type="number" id="cvc" placeholder="XXX" required>
         </div>
+        
         <div class="col-3 flex-column d-flex">
             <label for="amount"><strong> Amount # </strong></label>
             <input type="number" id="amount" placeholder="$ Amount" required>
         </div>
     </div> <!-- row -->
+    
     <div class="row align-items-start mb-3">
+        
         <div class="col flex-column d-flex">
             <label for="name"><strong>First Name</strong></label>
             <input type="text" id="name" required>
         </div> 
+        
         <div class="col flex-column d-flex">
             <label for="surname"><strong> Last Name </strong></label>
             <input type="text" id="surname"  required>
         </div>
     </div> <!-- row -->
     
-<div class="row align-items-start mb-3">
-    <div class="col-6 flex-column d-flex">
-        <label for="city"><strong> City </strong></label>
-        <input type="text" id="city" required>
-    </div> 
-    <div class="col-3 flex-column d-flex">
-        <label for="state" placeholder="Pick a state" ><strong> State </strong></label>
-        <select class="p-1" option="state"  id="state"  required>
-        <option selected>Pick a state</option>
-        <option value="Valencia">Valencia</option>
-        <option value="Castellón">Castellón</option>
-        <option value="Alicante">Alicante</option>
-        </select>
-    </div>
-    <div class="col-3 flex-column d-flex">
-        <label for="Postal Code"><strong> Postal Code </strong></label>
-        <input type="number" id="Postal Code" required>
-    </div>
-</div><!-- row -->
+    <div class="row align-items-start mb-3">
+        
+        <div class="col-6 flex-column d-flex">
+            <label for="city"><strong> City </strong></label>
+            <input type="text" id="city" required>
+        </div> 
+    
+        <div class="col-3 flex-column d-flex">
+            <label for="state" placeholder="Pick a state" ><strong> State </strong></label>
+            <select class="p-1" option="state"  id="state"  required>
+            <option selected>Pick a state</option>
+            <option value="Valencia">Valencia</option>
+            <option value="Castellón">Castellón</option>
+            <option value="Alicante">Alicante</option>
+            </select>
+        </div>
+    
+        <div class="col-3 flex-column d-flex">
+            <label for="Postal Code"><strong> Postal Code </strong></label>
+            <input type="number" id="Postal Code" required>
+        </div>
 
-<div class="row align-items-start">
-    <div class="col flex-column d-flex">
-        <label for="credit card"><strong>We Accept</strong></label>
+    </div><!-- row -->
 
+    <div class="row align-items-start">
+        
+        <div class="col flex-column d-flex">
+            <label for="credit card"><strong>We Accept</strong></label>
+        
         <div class="creditcards p-1 my-3 d-flex bg-secondary col-5 justify-content-between rounded">
 
             <div class="form-check">
                 <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
                 <i class="fa-brands fa-cc-mastercard"></i>
                 <label class="form-check-label" for="flexRadioDefault1"></label>
+            </div>
                     
                 
-            </div>
           <div class="form-check">
             <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
             <i class="fa-brands fa-cc-visa"></i>
             <label class="form-check-label" for="flexRadioDefault2"></label>
+           </div>
               
-          </div>
           <div class="form-check">
             <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
             <i class="fa-brands fa-cc-amazon-pay"></i>
             <label class="form-check-label" for="flexRadioDefault2"></label>
           </div>
+          
           <div class="form-check">
             <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
             <i class="fa-brands fa-cc-paypal"></i>
             <label class="form-check-label" for="flexRadioDefault2"></label>
           </div>
-        </div>
-    </div> 
-    <div class="col flex-column d-flex">
-        <label for="surname"><strong> Message </strong></label>
-        <textarea type= id="surname" required></textarea>
-        <p class="text-secondary"> Add any notes here</p>
-    </div>
-</div> <!-- Row -->
-
-    <div class="row justify-content-end p-2 border border-secondary mb-2">
-        <div class="col-1">
-        <button type="reset" class="btn btn-secondary">Cancel</button>
-        </div>
-        <div class="col-1">
-        <button type="submit" class="btn btn-primary">Send</button>
-        </div>
-
-    </div>
-
-</form>
-
-</div><!-- Container -->
+            </div>
+        </div> 
     
-        
+        <div class="col flex-column d-flex">
+            <label for="surname"><strong> Message </strong></label>
+            <textarea type= id="surname" required></textarea>
+            <p class="text-secondary"> Add any notes here</p>
+        </div>
+    
+    </div> <!-- Row -->
+
+    <div class="row justify-content-end p-2 border border-secondary ">
+        <div class="col-1">
+            <button type="reset" class="btn btn-secondary">Cancel</button>
+        </div>
+        <div class="col-1">
+            <button type="submit" class="btn btn-primary">Send</button>
+        </div>
+    </div><!-- Row -->
+
+    </form>
+
+    </div><!-- Container -->
+
 </body>
 </html>
+    
+        
